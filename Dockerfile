@@ -6,6 +6,7 @@ USER root
 COPY img/logo.svg /usr/share/grafana/public/img/logo.svg
 COPY img/favicon.png /usr/share/grafana/public/img/favicon.png
 COPY img/login_dark.svg /usr/share/grafana/public/img/login_dark.svg
+COPY img/login_light.svg /usr/share/grafana/public/img/login_light.svg
 
 # Verifica se os arquivos foram copiados corretamente
 RUN ls -l /usr/share/grafana/public/img/
@@ -14,6 +15,7 @@ RUN ls -l /usr/share/grafana/public/img/
 RUN mv -f /usr/share/grafana/public/img/logo.svg /usr/share/grafana/public/img/grafana_icon.svg
 RUN mv -f /usr/share/grafana/public/img/favicon.png /usr/share/grafana/public/img/fav32.png
 RUN mv -f /usr/share/grafana/public/img/login_dark.svg /usr/share/grafana/public/img/g8_login_dark.svg
+RUN mv -f /usr/share/grafana/public/img/login_light.svg /usr/share/grafana/public/img/g8_login_light.svg
 
 RUN find /usr/share/grafana/public/build/ -name *.js \
 ## Update Title
